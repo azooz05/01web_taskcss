@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Full-width input fields */
+.container {
+  width: 40%;
+  padding: 20px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  border: none;
+  background: linear-gradient(340deg, #1b1b1b 2%, #1e3a8a 55%, #0284c7 100%);
+  border-radius: 20px;
+}
+.sign{
+  color: #ffffff;
+}
+.second-text {
+  color: #cbd5e1;
+}
+.container h1,
+p {
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0px 200px;
+  margin-bottom: 20px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0px 100px;
+}
+
+.form-content label {
+  margin-bottom: 5px;
+  color: #f1f5f9;
+}
+
+.form-content input {
+  margin-bottom: 20px;
+  width: 400px;
+  background-color: #f8fafc;
+  height: 30px;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #93c5fd;
+  /* align-items: start;
+  justify-content: start; */
+}
+
+.form-content input:focus {
+  border: 1px solid #38bdf8;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  color: #f8fafc;
+}
+
+.checkbox input {
+  
+  width: 50px;
+  height: 20px;
+}
+/* Set a style for all buttons */
+button {
+  padding: 14px 30px;
+  margin: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.signupbtn {
+  background-color: #0284c7;
+  color: #ffffff;
+  font-weight: bold;
+}
+.signupbtn:hover {
+  background-color: #38bdf8;
+}
+.cancelbtn {
+  background-color: #f43d30;
+  color: #f8fafc;
+  border: 1px solid rgba(255, 225, 225, 0.3);
+}
+button:hover {
+  opacity: 1;
+  transform: translatey(-10%);
+}
+.cancelbtn:hover {
+  
+  background-color: #ef5e54;
+}
+
+
+/* Extra styles for the cancel button */
