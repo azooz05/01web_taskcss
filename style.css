@@ -39,7 +39,8 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 0px 100px;
+  padding: 0px 10px;
+  width: 90%;
 }
 
 .form-content label {
@@ -49,7 +50,7 @@ hr {
 
 .form-content input {
   margin-bottom: 20px;
-  width: 400px;
+  width: 95%;
   background-color: #f8fafc;
   height: 30px;
   display: flex;
