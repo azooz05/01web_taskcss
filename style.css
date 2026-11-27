@@ -4,109 +4,204 @@
   box-sizing: border-box;
 }
 
-/* Full-width input fields */
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f1f5f9;
+}
+
+/* حاوية الفورم الرئيسية */
 .container {
   width: 40%;
-  padding: 20px;
+  padding: 2rem;
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px auto;
+  margin: 4rem auto;
   border: none;
   background: linear-gradient(340deg, #1b1b1b 2%, #1e3a8a 55%, #0284c7 100%);
   border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.25);
 }
-.sign{
+
+.sign {
   color: #ffffff;
+  font-size: 2rem;
 }
+
 .second-text {
   color: #cbd5e1;
+  font-size: 0.95rem;
+  text-align: center;
 }
+
 .container h1,
-p {
-  margin-bottom: 20px;
+.container p {
+  margin-bottom: 1rem;
 }
 
 hr {
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 0px 200px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 360px;
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.25rem;
 }
 
+/* محتوى الحقول */
 .form-content {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  padding: 0px 10px;
-  width: 90%;
+  align-items: stretch;
+  width: 100%;
 }
 
 .form-content label {
-  margin-bottom: 5px;
+  margin-bottom: 0.4rem;
   color: #f1f5f9;
+  font-size: 0.95rem;
 }
 
-.form-content input {
-  margin-bottom: 20px;
-  width: 95%;
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"] {
+  margin-bottom: 1.1rem;
+  width: 100%;
+  height: 2.6rem;
+  padding: 0 0.75rem;
   background-color: #f8fafc;
-  height: 30px;
-  display: flex;
-  border-radius: 5px;
+  color: #0f172a;
+  font-size: 0.95rem;
+  border-radius: 6px;
   border: 1px solid #93c5fd;
-  /* align-items: start;
-  justify-content: start; */
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-content input:focus {
-  border: 1px solid #38bdf8;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
 }
 
+/* خيار Remember me */
 .checkbox {
   display: flex;
-  justify-content: start;
-  align-items: start;
+  align-items: center;
+  gap: 0.5rem;
   color: #f8fafc;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
-.checkbox input {
-  
-  width: 50px;
-  height: 20px;
+.checkbox label {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
-/* Set a style for all buttons */
-button {
-  padding: 14px 30px;
-  margin: 8px 20px;
-  border: none;
-  border-radius: 5px;
+
+.checkbox input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-bottom: 0 !important;
   cursor: pointer;
-  opacity: 0.9;
-  transition: 0.3s;
 }
+
+/* الأزرار */
+.clearfix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+button {
+  padding: 0.85rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  opacity: 0.95;
+  transition: 0.25s ease;
+}
+
 .signupbtn {
   background-color: #0284c7;
   color: #ffffff;
   font-weight: bold;
 }
+
 .signupbtn:hover {
   background-color: #38bdf8;
 }
+
 .cancelbtn {
   background-color: #f43d30;
   color: #f8fafc;
   border: 1px solid rgba(255, 225, 225, 0.3);
 }
-button:hover {
-  opacity: 1;
-  transform: translatey(-10%);
-}
+
 .cancelbtn:hover {
-  
   background-color: #ef5e54;
 }
 
+button:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
 
-/* Extra styles for the cancel button */
+/* =========================================
+   Media Queries: اللابتوب والتابلت والجوال
+   ========================================= */
+
+/* شاشات اللابتوب المتوسطة والتابلت الأفقي */
+@media (max-width: 1024px) {
+  .container {
+    width: 65%;
+    margin: 3rem auto;
+  }
+}
+
+/* شاشات التابلت العمودي والجوالات الكبيرة */
+@media (max-width: 768px) {
+  .container {
+    width: 88%;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 16px;
+  }
+
+  .sign {
+    font-size: 1.65rem;
+  }
+}
+
+/* شاشات الجوال الصغيرة */
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+    padding: 1.25rem;
+    margin: 1.25rem auto;
+    border-radius: 14px;
+  }
+
+  .sign {
+    font-size: 1.45rem;
+  }
+
+  .second-text {
+    font-size: 0.85rem;
+  }
+
+  .clearfix {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .clearfix button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+}
